@@ -1,0 +1,193 @@
+:root {
+    --color-primary: red;
+    --color-secondary: rgb(187, 15, 15);
+    --color-tertiary: rgb(234, 36, 6);
+    --color-light: rgb(238, 16, 105);
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    border: 0;
+    text-decoration: none;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: url("C:/New folder/images/hollow.jpg");
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+nav {
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+}
+
+nav .container {
+    width: 96%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+nav .container a {
+    background: linear-gradient(to left, 
+    var(--color-light), var(--color-secondary));
+    padding: 0.9rem 3rem;
+    margin: 0.4rem;
+    margin-top: -1.rem;
+    border-radius: 3rem;
+    position: relative;
+    transition: all 300ms ease;
+    
+}
+
+nav .container img{
+    width: 6rem;
+}
+
+
+nav .container #showNav, nav .container #toggleNav {
+    display: none;
+}
+
+nav .container ul {
+    color: var(--color-light);
+    display: flex;
+    gap: 4rem;
+}
+
+*{
+    color: whitesmoke;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    transition: all 300ms ease;
+}
+
+a:hover {
+    color: var(--color-light);
+}
+
+section {
+    display: grid;
+    place-items: center;
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+    color: blanchedalmond;
+    position: relative;
+    top: 3rem;
+}
+
+section .container h1 {
+
+    font-size: 10rem;
+    color: white;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+}
+
+section .container h3 {
+    text-transform: uppercase;
+    font-size: 2rem;
+    color: var(--color-light);
+    margin-bottom: 2rem;
+}
+
+section .container input[type="search"]{
+    background: transparent;
+    border: 1px solid white;
+    border-radius: 2rem;
+    height: 3.5rem;
+    padding: 1rem 1.5rem;
+    letter-spacing: o.1rem;
+    margin-bottom: 1.5rem;
+}
+
+section .container input [type="search"]::placeholder {
+    color: var(white);
+    letter-spacing: 0.1rem;
+}
+
+section .container input [placeholder="search..."]{
+    color: white;
+}
+
+section .container p{
+    letter-spacing: 0.06rem;
+    font-size: 0.8rem;
+    line-height: 1.7;
+    font-weight: 300;
+    max-width: 40rem;
+    margin: 0 auto;
+    margin-bottom: 3rem;
+}
+
+section .container a {
+    background: linear-gradient(to left, 
+    var(--color-light), var(--color-secondary));
+    padding: 0.9rem 3rem;
+    margin: 0.4rem;
+    border-radius: 3rem;
+    position: relative;
+    transition: all 300ms ease;
+}
+
+section .container a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -0.5rem;
+    width: 100%;
+    height: 100%;
+    border-radius: 3rem;
+    border-left: 5px solid var(--color-light);
+    transition: all 300ms ease;
+}
+
+section .container a:hover {
+    background: linear-gradient(
+        to right,
+        var(--color-secondary),
+        var(--color-light)
+    );
+}
+
+@media screen and (max-width: 700px) {
+    nav .container{
+        width: 100%;
+        height:1rem;
+        background: var(--color-primary);
+    }
+
+    nav img{
+        margin-left: 1rem;
+    }
+    nav .container #showNav, nav .container #toggleNav {
+        display: inline-block;
+        color: var(--color-light);
+        font-size: 2rem;
+        margin-right: 1rem;
+        cursor: pointer;
+        transition: all 300ms ease;
+    }
+    nav .container #showNav:checked ~ ul{
+        display: block;
+    }
+
+    nav .container ul {
+        display: none;
+        position: absolute;
+        top: 100%;
+        width: 100;
+    }
+    nav .container ul li{
+        text-align: center;
+
+    }
+}
